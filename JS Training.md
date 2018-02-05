@@ -1,11 +1,11 @@
-### 1) Alert
+### 1.1) Alert
 Вывести на страницу любую надпись
 ```
 //-------------------- JavaScript--------------------
 alert ("I'm JavaScript")
 ```
 
-### 2) Work with variables
+### 1.2) Work with variables
 ```
 //-------------------- JavaScript--------------------
 var admin;
