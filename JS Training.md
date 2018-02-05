@@ -1,4 +1,4 @@
-#### 1) Alert
+### 1) Alert
 ```javascript
 alert ("I'm JavaScript")
 ```
