@@ -188,7 +188,7 @@ do {
 ```
 
 ### 1.14) Rewrite SWITCH to IF
-Напишисать if..else, соответствующий следующему switch:
+Написать if..else, соответствующий следующему switch:
 ```
 switch (browser) {
   case 'IE':
@@ -223,7 +223,7 @@ else{
 ```
 
 ### 1.15) Rewrite IF to SWITCH
-Перепишисать код с использованием одной конструкции switch:
+Переписать код с использованием одной конструкции switch:
 ```
 var a = +prompt('a?', '');
 
@@ -256,4 +256,34 @@ switch (a) {
     alert( '2,3' );
     break;
 }
+```
+
+### 1.16) Fuunction MIN
+Написать функцию, которая возвращает наименьшее из двух чисел
+```
+function min(a,b){
+	if (a>b){
+  	return a;
+  }
+  return b;
+}
+
+alert (min(6,5))
+```
+
+### 1.17) Fubction POW
+Написать функцию возведения числа в степень
+```
+var x = +prompt("Введите число:", '');
+var n = +prompt("Введите степень:", '')
+
+function pow(x,n){
+	var result = 1;
+  for(i=0; i<n; i++){
+  	result *= x;
+  }
+  return result;
+}
+
+alert (x + " в степени " + n + " = " + pow(x,n))
 ```
