@@ -287,3 +287,28 @@ function pow(x,n){
 
 alert (x + " в степени " + n + " = " + pow(x,n))
 ```
+
+### 1.18) The sum of numbers up to this point
+Написать функцию sumTo(n), которая для данного n вычисляет сумму чисел от 1 до n
+```
+//---------------------- Вариант №1--------------------------
+function sumTo(n){
+	if n == 1) return 1;
+	return n + sumTo(n-1)
+}
+
+alert(sumTo(3)) // 1+2+3 = 6
+```
+
+```
+//---------------------- Вариант №2--------------------------
+function sumTo(x){
+	var sum = 0;
+	for (i=0; i<=x; i++){
+  	sum += i;
+  }
+  return sum;
+}
+
+alert(sumTo(5)) // 1+2+3+4+5 = 15
+```
