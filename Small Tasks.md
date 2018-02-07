@@ -186,3 +186,74 @@ do {
   question = prompt("Введите число больше 100?", 0);
 } while (question<=100 && question!=null);
 ```
+
+### 1.14) Rewrite SWITCH to IF
+Напишисать if..else, соответствующий следующему switch:
+```
+switch (browser) {
+  case 'IE':
+    alert( 'О, да у вас IE!' );
+    break;
+
+  case 'Chrome':
+  case 'Firefox':
+  case 'Safari':
+  case 'Opera':
+    alert( 'Да, и эти браузеры мы поддерживаем' );
+    break;
+
+  default:
+    alert( 'Мы надеемся, что и в вашем браузере все ок!' );
+}
+
+```
+
+```
+var question = prompt ("Введите ваш браузер:", '').toLowerCase();
+
+if (question == "ie"){
+  alert ("О, да у вас IE!")
+}
+else if (question == "chrome" || question == "firefox" || question == "safari" || question == "opera"){
+  alert ("Да, этот браузер мы поддерживаем")
+}
+else{
+  alert ("Мы надеемся, что и в вашем браузере все ок!")
+}
+```
+
+### 1.15) Rewrite IF to SWITCH
+Перепишисать код с использованием одной конструкции switch:
+```
+var a = +prompt('a?', '');
+
+if (a == 0) {
+  alert( 0 );
+}
+if (a == 1) {
+  alert( 1 );
+}
+
+if (a == 2 || a == 3) {
+  alert( '2,3' );
+}
+```
+
+```
+var a = +prompt('a?', '');
+
+switch (a) {
+  case 0:
+    alert( 0 );
+    break;
+
+  case 1:
+    alert( 1 );
+    break;
+
+  case 2:
+  case 3:
+    alert( '2,3' );
+    break;
+}
+```
