@@ -312,3 +312,37 @@ function sumTo(x){
 
 alert(sumTo(5)) // 1+2+3+4+5 = 15
 ```
+
+### 1.19) Calculate factorial
+Написать функцию, которая вычисляет факториал числа
+```
+//---------------------- Вариант №1--------------------------
+function factorial (n){
+	if (n==1){
+  	return 1;
+  }
+  else{
+  	return n* factorial (n-1);
+  }
+}
+
+alert(factorial (5)) // 1*2*3*4*5 = 120
+```
+
+```
+//---------------------- Вариант №2--------------------------
+function factorial (n){
+  if (n==1){
+    return 1;
+  }
+  else{
+    var result = 1;
+    for (var i=1; i<=n; i++){
+      result *= i;
+    }
+  }
+  return result;
+}
+
+alert(factorial (6))
+```
