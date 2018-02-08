@@ -1,10 +1,10 @@
-### 1.1) Alert
+### 1) Alert
 Вывести на страницу любую надпись
 ```
 alert ("I'm JavaScript")
 ```
 
-### 1.2) Work with variables
+### 2) Work with variables
 ```
 var admin;
 var name;
@@ -15,7 +15,7 @@ admin = name;
 alert (admin);
 ```
 
-### 1.3) Simple page
+### 3) Simple page
 Создать страницу, которая спрашивает имя и выводит его.
 ```
 var name = prompt ("Ведите ваше имя", "Владислав");
@@ -23,7 +23,7 @@ var name = prompt ("Ведите ваше имя", "Владислав");
 alert ("Привет, " + name + "!")
 ```
 
-### 1.4) Checking the standard
+### 4) Checking the standard
 Простой пример с оператором if-else
 ```
 var question = prompt ("Каково «официальное» название JavaScript?", '');
@@ -36,7 +36,7 @@ else{
 }
 ```
 
-### 1.5) get the sign of a number
+### 5) get the sign of a number
 Простой пример с оператором if-else (2)
 ```
 var question = prompt ("Введите число", '');
@@ -52,7 +52,7 @@ else{
 }
 ```
 
-### 1.6) Login verification
+### 6) Login verification
 Проверка на корректность логина и пароля
 ```
 var login = prompt ("Кто пришёл", '').toLowerCase();
@@ -79,7 +79,7 @@ else{
 }
 ```
 
-### 1.7) Ternary operator
+### 7) Ternary operator
 Простой пример с использованием "?"
 ```
 var a = prompt ("Введите число А", '0');
@@ -90,7 +90,7 @@ result = (a + b < 4) ? "Мало" : "Много";
 alert (result)
 ```
 
-### 1.8) Login verification vith ternary operator
+### 8) Login verification vith ternary operator
 Проверка на корректность логина и пароля с помощью тернарного оператора
 ```
 var login = prompt ("Введите ваш логин: ", '').toLowerCase();
@@ -103,7 +103,7 @@ var message = (login == "admin") ? "Привет!" :
 alert (message);
 ```
 
-### 1.9) Check IF
+### 9) Check IF
 Если возраст меньше 18 и больше 90 включительно, то закрыть доступ
 ```
 var age = prompt ("Введите ваш возраст", '');
@@ -116,7 +116,7 @@ else{
 }
 ```
 
-### 1.10) Check IF (2)
+### 10) Check IF (2)
 Если возраст меньше 18 и больше 90 включительно, то открыть доступ
 ```
 //---------------------- Вариант №1--------------------------
@@ -142,7 +142,7 @@ else{
 }
 ```
 
-### 1.11) Output of even numbers
+### 11) Output of even numbers
 С помощью цикла FOR вывести четные числа от 0 до 10
 ```
 //---------------------- Вариант №1--------------------------
@@ -161,7 +161,7 @@ for (var i=0; i<=10; i++){
 }
 ```
 
-### 1.12) Change FOR to WHILE
+### 12) Change FOR to WHILE
 Переписать код с циклом FOR на код с циклом WHILE
 ```
 for (var i = 0; i < 3; i++) {
@@ -177,7 +177,7 @@ while (i<3) {
 }
 ```
 
-### 1.13) Repeat cycle until input is incorrect
+### 13) Repeat cycle until input is incorrect
 Написать цикл, который предлагает prompt ввести число, большее 100. Если посетитель ввёл другое число – попросить ввести ещё раз, и так далее.
 ```
 var question;
@@ -187,7 +187,7 @@ do {
 } while (question<=100 && question!=null);
 ```
 
-### 1.14) Rewrite SWITCH to IF
+### 14) Rewrite SWITCH to IF
 Написать if..else, соответствующий следующему switch:
 ```
 switch (browser) {
@@ -222,7 +222,7 @@ else{
 }
 ```
 
-### 1.15) Rewrite IF to SWITCH
+### 15) Rewrite IF to SWITCH
 Переписать код с использованием одной конструкции switch:
 ```
 var a = +prompt('a?', '');
@@ -258,7 +258,7 @@ switch (a) {
 }
 ```
 
-### 1.16) Fuunction MIN
+### 16) Fuunction MIN
 Написать функцию, которая возвращает наименьшее из двух чисел
 ```
 function min(a,b){
@@ -271,7 +271,7 @@ function min(a,b){
 alert (min(6,5))
 ```
 
-### 1.17) Fubction POW
+### 17) Fubction POW
 Написать функцию возведения числа в степень
 ```
 var x = +prompt("Введите число:", '');
@@ -288,7 +288,7 @@ function pow(x,n){
 alert (x + " в степени " + n + " = " + pow(x,n))
 ```
 
-### 1.18) The sum of numbers up to this point
+### 18) The sum of numbers up to this point
 Написать функцию sumTo(n), которая для данного n вычисляет сумму чисел от 1 до n
 ```
 //---------------------- Вариант №1--------------------------
@@ -313,7 +313,7 @@ function sumTo(x){
 alert(sumTo(5)) // 1+2+3+4+5 = 15
 ```
 
-### 1.19) Calculate factorial
+### 19) Calculate factorial
 Написать функцию, которая вычисляет факториал числа
 ```
 //---------------------- Вариант №1--------------------------
@@ -345,4 +345,40 @@ function factorial (n){
 }
 
 alert(factorial (6))
+```
+
+### 20) Addition of prices
+Сложить 2 дробных числа
+```
+var a = 0.1;
+var b = 0.2
+
+alert ((a+b).toFixed(1)) //необходимо округлить до 1 знака для более наглядного вычисления
+```
+
+### 21) Math random (0, max)
+Вывести случайно число из диапазона 0..max
+```
+var max = +prompt("Введите максимальное число", 1);
+
+alert (Math.random() * max)
+```
+
+### 22) Math random (min, max)
+Вывести случайное число из диапазона min..max, введенным пользователем
+```
+var min = +prompt("Введите минимально число", 0);
+var max = +prompt("Введите максимальное число", 0);
+
+if (min>max){
+  alert ("min>max, так нельзя")
+}
+else{
+  alert (getRandomArbitary(min,max))
+}
+
+function getRandomArbitary(min, max){
+  var rand = Math.round(Math.random() * (max - min) + min);
+  return rand;
+}
 ```
