@@ -382,3 +382,16 @@ function getRandomArbitary(min, max){
   return rand;
 }
 ```
+
+### 23) Make the first character capitalized
+Написать функцию ucFirst(str), которая возвращает отфармотированную полученную строку с заглавным первым символом
+```
+var word = "пРиВЕт".toLowerCase();
+
+function ucFirst (str){
+  str = str[0].toUpperCase() + str.slice(1);
+  return str;
+}
+
+alert (ucFirst(word))
+```
