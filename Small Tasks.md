@@ -395,3 +395,36 @@ function ucFirst (str){
 
 alert (ucFirst(word))
 ```
+
+### 24) Check spam
+Написать функцию checkSpam(str), которая возвращает true, если строка содержит „viagra“ или „XXX“, а иначе false.
+```
+var word = prompt("Введите запрос", '').toLowerCase()
+
+function checkSpam(str){
+	while (str.indexOf('viagra') || str.indexOf('xxx')){
+  	alert ("Данный запрос недопустим");
+    break;
+  }
+}
+
+checkSpam(word)
+```
+
+### 25) Cut the string
+Создать функцию truncate(str, maxlength), которая проверяет длину строки str, и если она превосходит maxlength – заменяет конец str на "...", так чтобы ее длина стала равна maxlength.
+```
+var string = prompt("Введите строку", '');
+var maxLength = +prompt("Введите максимальное количество отображаемых символов");
+
+function truncate(str, maxlength){
+	if(str.length > maxlength){
+		return str = str.slice(0, maxlength+1) + "..."
+  }
+  else{
+  	return str
+  }
+}
+
+alert(truncate (string, maxLength))
+```
