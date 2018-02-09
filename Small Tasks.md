@@ -482,3 +482,46 @@ for (var key in salaries){
 
 alert (counter)
 ```
+
+### 29) The property with the highest value
+Есть объект salaries с зарплатами. Написать код, который выведет имя сотрудника, у которого самая большая зарплата.
+```
+var salaries = {
+  "Вася": 100,
+  "Петя": 300,
+  "Даша": 250
+};
+
+var max = 0;
+var name = "Нет сотрудников"
+for (var key in salaries){
+	if(salaries[key] > max){
+  	max = salaries[key];
+    name = key;
+  }
+}
+
+alert (name)
+```
+
+### 30) Multiply Numerical Properties by 2
+Создать функцию multiplyNumeric, которая получает объект и умножает все численные свойства на 2. 
+```
+var salaries = {
+  "Вася": 100,
+  "Петя": 300,
+  "Даша": 250,
+  title: "My menu"
+};
+
+function multiplyNumeric(obj){
+  for (var key in obj){
+    if (typeof(obj[key]) == 'number'){
+      obj[key] *= 2
+    }
+  }
+  return obj
+}
+
+console.log(multiplyNumeric(salaries))
+```
