@@ -442,3 +442,43 @@ function extractCurrencyValue(str){
 
 alert(extractCurrencyValue(string));
 ```
+
+### 27) Is object empty?
+Написать функцию, которая возвращает true, если в объекте есть свойства, и false, если свойст нет
+```
+function isEmpty(obj) {
+	var counter = 0;
+  for (var key in obj){
+  	counter++;
+  }
+  if (counter>0){
+  	return true;
+  }
+  else{
+  	return false;
+  }
+}
+
+var person = {};
+
+alert(isEmpty(person)); // false
+person.name = "Владислав";
+alert(isEmpty(person)); // true
+```
+
+### 28) Sum of propertis
+Есть объект salaries с зарплатами. Напишсать код, который выведет сумму всех зарплат.
+```
+var salaries = {
+  "Вася": 100,
+  "Петя": 300,
+  "Даша": 250
+};
+
+var counter = 0;
+for (var key in salaries){
+	counter += salaries[key]; 
+}
+
+alert (counter)
+```
