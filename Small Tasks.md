@@ -525,3 +525,76 @@ function multiplyNumeric(obj){
 
 console.log(multiplyNumeric(salaries))
 ```
+
+### 31) Get the last element of array
+Получить последний элемент из массива
+```
+var arr = ['one', 'two', 'three', 'four', 'five', 'six',]
+
+var lastElement = '';
+
+for (var i=0; i<arr.length; i++){
+	lastElement = arr[i];
+}
+alert (lastElement)
+```
+
+### 32) Add new elements to array
+Добавить новый элемент в начало и конец массива
+```
+var arr = ["one", "two", "three", "four", "five", "six",]
+
+arr.push("seven") // добавить элемент в конец
+alert (arr)
+arr.unshift("zero") // добавить элемент в начало
+alert (arr)
+```
+
+### 33) Create array in 5 steps
+1) Создайте массив styles с элементами «Джаз», «Блюз».
+2) Добавьте в конец значение «Рок-н-Ролл»
+3) Замените предпоследнее значение с конца на «Классика». Код замены предпоследнего значения должен работать для массивов любой длины.
+4) Удалите первое значение массива и выведите его alert.
+5) Добавьте в начало значения «Рэп» и «Регги».
+```
+var arr = ["Джаз", "Блюз"];
+
+arr.push("Рок-н-Ролл")
+alert (arr);
+
+arr[arr.length-2] = "Классика"
+alert (arr);
+
+arr.shift(arr[0]);
+alert (arr);
+
+arr.unshift("Рэп", "Рэгги")
+alert (arr);
+```
+
+### 34) Array's elements calculator
+Напиcать код, который:
+
+1) Запрашивает по очереди значения при помощи prompt и сохраняет их в массиве.
+2) Заканчивает ввод, как только посетитель введёт пустую строку, не число или нажмёт «Отмена».
+3) При этом ноль 0 не должен заканчивать ввод, это разрешённое число.
+4) Выводит сумму всех значений массива.
+```
+var numbers = [];
+
+while (true) {
+  var value = prompt("Введите число", 0);
+  if (value == "" || value == null || isNaN(value)){
+    break;
+  }
+  numbers.push(+value);
+}
+
+var sum = 0;
+for (var i=0; i<numbers.length; i++){
+	sum += numbers[i]
+}
+
+alert ("Элементы в массиве: " + numbers);
+alert ("Сумма элементов массива: " + sum);
+```
