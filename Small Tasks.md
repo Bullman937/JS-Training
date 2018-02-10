@@ -598,3 +598,43 @@ for (var i=0; i<numbers.length; i++){
 alert ("Элементы в массиве: " + numbers);
 alert ("Сумма элементов массива: " + sum);
 ```
+
+### 35) Search in array
+Создать функцию find(arr, value), которая ищет в массиве arr значение value и возвращает его номер, если найдено, или -1, если не найдено.
+```
+var arr = ["test", 2, 1.5, false];
+
+function find (arr, value){
+  var findest = '';
+  for (var i=0; i<arr.length; i++){
+    if (value === arr[i]){
+      findest = i;
+      return findest;
+    }
+  }
+  return -1;
+}
+
+alert(find (arr, 2)); // 1
+alert(find (arr, false)); // 3
+alert(find (arr, 0)); // -1
+```
+
+
+### 36) Filtered array
+Создать функцию filterRange(arr, a, b), которая принимает массив чисел arr и возвращает новый массив, который содержит только числа из arr из диапазона от a до b. То есть, проверка имеет вид a ≤ arr[i] ≤ b. Функция не должна менять arr.
+```
+var arr = [5, 4, 3, 8, 0];
+
+function filtered (arr, a, b){
+	var filteredArr = [];
+  for (var i=0; i<arr.length; i++){
+  	if (i>=a && i<=b){
+    	filteredArr.push(arr[i]);
+    }
+  }
+  return filteredArr;
+}
+
+alert(filtered(arr,0,2));
+```
