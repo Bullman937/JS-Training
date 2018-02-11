@@ -687,3 +687,31 @@ function camelsize(str){
 
 alert(camelsize ('-webkit-transition'));
 ```
+
+### 39) Function removeClass
+У объекта есть свойство className, которое хранит список «классов» – слов, разделенных пробелами. Напишите функцию removeClass(obj, cls), которая удаляет класс cls, если он есть.
+```
+var obj = {
+  className: 'open menu'
+}
+
+function removeClass(obj, cls){
+
+  for (var key in obj){
+    var arr = obj[key].split(' ');
+  }
+
+  for (i=0; i<=arr.length; i++){
+    if (arr[i] == cls){
+      arr.splice(i,1);
+      var str = arr.join(' ')
+      obj.className = str;
+      return obj;
+    }
+  }
+  return obj;
+}
+
+removeClass (obj, "new")
+```
+
