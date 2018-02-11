@@ -620,7 +620,6 @@ alert(find (arr, false)); // 3
 alert(find (arr, 0)); // -1
 ```
 
-
 ### 36) Filtered array
 Создать функцию filterRange(arr, a, b), которая принимает массив чисел arr и возвращает новый массив, который содержит только числа из arr из диапазона от a до b. То есть, проверка имеет вид a ≤ arr[i] ≤ b. Функция не должна менять arr.
 ```
@@ -637,4 +636,54 @@ function filtered (arr, a, b){
 }
 
 alert(filtered(arr,0,2));
+```
+
+### 37) Add class to string
+В объекте есть свойство className, которое содержит список «классов» – слов, разделенных пробелом. Создать функцию addClass(obj, cls), которая добавляет в список класс cls, но только если его там еще нет.
+```
+var obj = {
+  className: 'open menu'
+}
+
+function addClass(obj, cls){
+
+  for (var key in obj){
+    var arr = obj[key].split(' ');
+  }
+
+  for (i=0; i<=arr.length; i++){
+    if (arr[i] == cls){
+      var str = arr.join(' ')
+      obj.className = str;
+      return obj;
+    }
+    if (i == arr.length && arr[i] !== cls){
+      arr.push(cls);
+      var str = arr.join(' ')
+      obj.className = str;
+      return obj;
+    }
+  }
+}
+
+addClass (obj, "new")
+```
+
+### 38) Function camelSize
+Напиcать функцию camelSize(str), которая преобразует строки вида «my-short-string» в «myShortString».
+То есть, дефисы удаляются, а все слова после них получают заглавную букву.
+```
+function camelsize(str){
+	var arr = str.split('');
+  for (var i=0; i<arr.length; i++){
+  	if (arr[i] == "-"){
+    	arr[i+1] = arr[i+1].toUpperCase();
+    	arr.splice(i,1);
+    }
+  }
+  var string = arr.join('')
+  return string;
+}
+
+alert(camelsize ('-webkit-transition'));
 ```
