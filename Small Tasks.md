@@ -756,3 +756,38 @@ function makeNewArr (arr){
 alert(makeNewArr(array));
 ```
 
+### 42) Sum of arguments
+Написать функцию, которая возвращает сумму всех аргументов
+```
+function sum(){
+	var sum = 0;
+	for (var i=0; i<arguments.length; i++){
+  	sum += arguments[i]
+  }
+  return sum;
+}
+
+alert("Сумма аргументов - " + sum(1,2,3,4,5))
+```
+
+### 43) Check for arguments availability
+Написать функцию, которая выводит 1, если аргументы есть, и 0, если аргументов нет
+```
+function f(x){
+	if (arguments.length>0){
+  	return alert(1);
+  }
+  return alert(0);
+}
+
+f(undefined); // 1
+```
+
+### 44) Create date
+Создать объект Date для даты: 20 февраля 2012 года, 3 часа 12 минут.
+```
+var d = new Date (2012, 1, 20, 3, 12)
+
+alert (d);
+```
+
