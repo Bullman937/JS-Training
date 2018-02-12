@@ -715,3 +715,44 @@ function removeClass(obj, cls){
 removeClass (obj, "new")
 ```
 
+### 40) Rewrite cycle using map
+Переписать код, использую метод MAP
+```
+var arr = ["Есть", "жизнь", "на", "Марсе"];
+
+var arrLength = [];
+for (var i = 0; i < arr.length; i++) {
+  arrLength[i] = arr[i].length;
+}
+
+alert( arrLength ); // 4,5,2,5
+```
+
+```
+var arr = ["Есть", "жизнь", "на", "Марсе"];
+
+var arrLength = arr.map(function(number){
+	return number.length;
+})
+
+alert (arrLength)
+```
+
+### 41) Аrray of partial sums
+На входе массив чисел, например: arr = [1,2,3,4,5]. Написать функцию getSums(arr), которая возвращает массив его частичных сумм. Иначе говоря, вызов getSums(arr) должен возвращать новый массив из такого же числа элементов, в котором на каждой позиции должна быть сумма элементов arr до этой позиции включительно.
+```
+var array = [ 1, 2, 3, 4, 5 ]
+
+function makeNewArr (arr){
+  var resultArr = []; 
+  var totalSum = arr.reduce(function (sum, current){ //sum - текущая позиций (в начале 0), current - текущий элемент массива (в начале 1)
+    resultArr.push(sum);
+    return sum + current; // в конце массива sum станет равной сумме всех элементов
+  })
+  resultArr.push(totalSum);
+  return resultArr;
+}
+
+alert(makeNewArr(array));
+```
+
