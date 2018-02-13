@@ -791,3 +791,46 @@ var d = new Date (2012, 1, 20, 3, 12)
 alert (d);
 ```
 
+### 45) Day's of the week name
+Создать функцию getWeekDay(date), которая выводит текущий день недели в коротком формате „пн“, „вт“, … „вс“.
+```
+var d = new Date (2012,0,4)
+
+function getWeekDay (date){
+  var days = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
+
+  return days[date.getDay()];
+}
+
+alert ("День недели - " + getWeekDay(d))
+```
+
+
+### 46) Create calculator
+Создать объект calculator с тремя методами:
+
+read() запрашивает prompt два значения и сохраняет их как свойства объекта
+sum() возвращает сумму этих двух значений
+mul() возвращает произведение этих двух значений
+```
+var calculator = {
+  read: function(){
+    this.number1 = +prompt ("Введите первое число: ", 0);
+    this.number2 = +prompt ("Введите второе число: ", 0);
+  },
+  
+  sum: function(){
+  	return this.number1 + this.number2;
+  },
+  
+  mul: function(){
+  	return this.number1 * this.number2;
+  }
+}
+
+calculator.read();
+alert( calculator.sum() );
+alert( calculator.mul() );
+
+```
+
